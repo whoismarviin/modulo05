@@ -1,0 +1,73 @@
+<div class="items">
+    <div>Avatar_Url</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder='http://' value='{{member.avatar_url}}'>
+    </div>
+</div>
+
+<div class="items">
+    <div>member</div>
+    <div>
+        <input type="text" name="name" value='{{member.name}}'>
+    </div>
+</div>
+
+<div class="items">
+    <div>Sexo</div>
+    <div>
+        <span><input type="radio" name="gender" value='M'{% if member.gender =='M' %}
+        checked
+        {% endif %} >Masculino</span>
+        <span><input type="radio" name="gender" value='F' {% if member.gender =='F' %}
+        checked
+        {% endif %}>Feminino</span>
+    </div>
+</div>
+
+<div class="items">
+    <div>Data de Nascimento</div>
+    <div>
+        <input type="date" name="birth" value='{{member.birth}}'>
+    </div>
+</div>
+
+<div class="items">
+    <div>Tipo Sanguíneo</div>
+    <div>
+        <select name="blood">
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="AB">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O">O+</option>
+            <option value="O-">O-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+        </select>
+    </div>
+</div>
+
+
+<div class="items">
+    <div>Peso (kg)</div>
+    <div>
+        <input 
+        type="number"
+        name="weight"
+        value="{{member.weight}}">
+    </div>
+</div>
+
+<div class="items">
+    <div>Altura(cm)</div>
+    <div>
+        <input 
+        type="number"
+        name="height"
+        value="{{member.height}}">
+    </div>
+</div>
+
+
+
+<button type='submit'>Salvar</button>
